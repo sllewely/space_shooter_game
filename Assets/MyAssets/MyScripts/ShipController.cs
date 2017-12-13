@@ -17,6 +17,7 @@ public class ShipController : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
+	// fine to do inputs inside of update
 	void Update () {
 		if (Input.GetKeyDown (KeyCode.D)) {
 			
@@ -26,6 +27,16 @@ public class ShipController : MonoBehaviour {
 		isEngineOn = Input.GetKey (KeyCode.Space);
 
 		horizontalInputValue = Input.GetAxis("Horizontal");
+	}
+
+	// use every time for physics interactions
+	void FixedUpdate() {
+		if (isEngineOn) {
+			shipRigidBody.AddForce (transform.up * shipSpeed);
+		}
+
+		// torque is for a rotating object
+		shipRigidBody.AddTorque(turnSpeed * - horizontalInputValue);
 	}
 
 	void PrintDebug() {

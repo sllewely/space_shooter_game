@@ -3709,9 +3709,9 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
+  m_Mass: 2
+  m_LinearDrag: 1
+  m_AngularDrag: 12
   m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
@@ -3729,9 +3729,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6505a679a72074a56a4fcdf35f534ac8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shipRigidBody: {fileID: 0}
-  shipSpeed: 0
-  turnSpeed: 0
+  shipRigidBody: {fileID: 1035198360}
+  shipSpeed: 10
+  turnSpeed: 26
 --- !u!58 &1035198362
 CircleCollider2D:
   m_ObjectHideFlags: 0
