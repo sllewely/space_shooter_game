@@ -7,6 +7,7 @@ public class ShipController : MonoBehaviour {
 	public Rigidbody2D shipRigidBody;
 	public float shipSpeed;
 	public float turnSpeed;
+	public ParticleSystem flames;
 
 	private float horizontalInputValue;
 	bool isEngineOn = false;
