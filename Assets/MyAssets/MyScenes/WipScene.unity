@@ -876,7 +876,7 @@ ParticleSystem:
     rateOverTime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 400
+      scalar: 0
       minScalar: 10
       maxCurve:
         serializedVersion: 2
@@ -10537,6 +10537,7 @@ MonoBehaviour:
   shipRigidBody: {fileID: 1035198360}
   shipSpeed: 10
   turnSpeed: 26
+  flames: {fileID: 256260797}
 --- !u!58 &1035198362
 CircleCollider2D:
   m_ObjectHideFlags: 0

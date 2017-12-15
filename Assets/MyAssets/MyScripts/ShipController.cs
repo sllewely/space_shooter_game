@@ -34,6 +34,7 @@ public class ShipController : MonoBehaviour {
 	void FixedUpdate() {
 		if (isEngineOn) {
 			shipRigidBody.AddForce (transform.up * shipSpeed);
+			flames.Emit (10);
 		}
 
 		// torque is for a rotating object
