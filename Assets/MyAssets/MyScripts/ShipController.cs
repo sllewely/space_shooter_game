@@ -4,6 +4,12 @@ using UnityEngine;
 
 public class ShipController : MonoBehaviour {
 
+	public AudioSource soundPlayer;
+	public AudioClip laserShotSound;
+
+	[Range (0.0f, 1.0f)]
+	public float laserShotVolume;
+
 	public Transform laserLauncherTransformLeft;
 	public Transform laserLauncherTransformRight;
 	public GameObject laserShotPrefab;
@@ -26,8 +32,7 @@ public class ShipController : MonoBehaviour {
 	void Update () {
 //		if (Input.GetMouseButtonDown (0)) {
 		if (Input.GetKeyDown(KeyCode.Space)) {
-			Instantiate (laserShotPrefab, laserLauncherTransformLeft.position, laserLauncherTransformLeft.rotation);
-			Instantiate (laserShotPrefab, laserLauncherTransformRight.position, laserLauncherTransformRight.rotation);
+			ShootLaser ();
 		}
 
 		if (Input.GetKeyDown (KeyCode.D)) {
@@ -35,7 +40,7 @@ public class ShipController : MonoBehaviour {
 			PrintDebug ();
 		}
 
-		isEngineOn = Input.GetKey (KeyCode.Space);
+		isEngineOn = Input.GetKey (KeyCode.UpArrow);
 
 		horizontalInputValue = Input.GetAxis("Horizontal");
 	}
@@ -50,6 +55,14 @@ public class ShipController : MonoBehaviour {
 		// torque is for a rotating object
 		shipRigidBody.AddTorque(turnSpeed * - horizontalInputValue);
 	}
+
+	public void ShootLaser() {
+		soundPlayer.PlayOneShot (laserShotSound, laserShotVolume);
+		Instantiate (laserShotPrefab, laserLauncherTransformLeft.position, laserLauncherTransformLeft.rotation);
+		Instantiate (laserShotPrefab, laserLauncherTransformRight.position, laserLauncherTransformRight.rotation);
+	}
+
+
 
 	void PrintDebug() {
 		Debug.Log (Input.GetAxis ("Horizontal").ToString ());
