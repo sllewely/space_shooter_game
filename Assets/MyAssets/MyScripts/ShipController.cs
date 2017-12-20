@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class ShipController : MonoBehaviour {
 
+	public Transform laserLauncherTransformLeft;
+	public Transform laserLauncherTransformRight;
+	public GameObject laserShotPrefab;
+
 	public Rigidbody2D shipRigidBody;
 	public float shipSpeed;
 	public float turnSpeed;
@@ -20,6 +24,12 @@ public class ShipController : MonoBehaviour {
 	// Update is called once per frame
 	// fine to do inputs inside of update
 	void Update () {
+//		if (Input.GetMouseButtonDown (0)) {
+		if (Input.GetKeyDown(KeyCode.Space)) {
+			Instantiate (laserShotPrefab, laserLauncherTransformLeft.position, laserLauncherTransformLeft.rotation);
+			Instantiate (laserShotPrefab, laserLauncherTransformRight.position, laserLauncherTransformRight.rotation);
+		}
+
 		if (Input.GetKeyDown (KeyCode.D)) {
 			
 			PrintDebug ();

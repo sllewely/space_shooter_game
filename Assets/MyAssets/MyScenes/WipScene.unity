@@ -316,7 +316,7 @@ ParticleSystem:
   moveWithTransform: 1
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: 304364089
+  randomSeed: 1361803626
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -7068,6 +7068,62 @@ Transform:
   m_Father: {fileID: 263359246}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &445845936
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 445845937}
+  m_Layer: 0
+  m_Name: LaserLauncherRight
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &445845937
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 445845936}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.29, y: 1.27, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1035198359}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &660710068
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 660710069}
+  m_Layer: 0
+  m_Name: LaserLauncherLeft
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &660710069
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 660710068}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.37, y: 1.27, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1035198359}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &692716392
 GameObject:
   m_ObjectHideFlags: 0
@@ -10500,6 +10556,8 @@ Transform:
   - {fileID: 256260798}
   - {fileID: 237761001}
   - {fileID: 692716395}
+  - {fileID: 660710069}
+  - {fileID: 445845937}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -10534,6 +10592,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6505a679a72074a56a4fcdf35f534ac8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  laserLauncherTransformLeft: {fileID: 660710069}
+  laserLauncherTransformRight: {fileID: 445845937}
+  laserShotPrefab: {fileID: 1284152382378540, guid: c70f21efd8c4b49668378d2a2c734358,
+    type: 2}
   shipRigidBody: {fileID: 1035198360}
   shipSpeed: 10
   turnSpeed: 26
@@ -10725,6 +10787,10 @@ Prefab:
     - target: {fileID: 4719492424311656, guid: 4fcd3b3895de94aa7a689b6cd4e9c686, type: 2}
       propertyPath: m_RootOrder
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1195490281265316, guid: 4fcd3b3895de94aa7a689b6cd4e9c686, type: 2}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4fcd3b3895de94aa7a689b6cd4e9c686, type: 2}
