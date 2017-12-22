@@ -49,7 +49,7 @@ public class ShipController : MonoBehaviour {
 			PrintDebug ();
 		}
 
-		isEngineOn = Input.GetKey (KeyCode.UpArrow);
+		isEngineOn = Input.GetKey (KeyCode.Mouse0);
 
 //		horizontalInputValue = Input.GetAxis("Horizontal");
 	}
