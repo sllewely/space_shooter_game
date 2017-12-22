@@ -42,7 +42,7 @@ public class ShipController : MonoBehaviour {
 
 		isEngineOn = Input.GetKey (KeyCode.UpArrow);
 
-		horizontalInputValue = Input.GetAxis("Horizontal");
+//		horizontalInputValue = Input.GetAxis("Horizontal");
 	}
 
 	// use every time for physics interactions
@@ -53,7 +53,7 @@ public class ShipController : MonoBehaviour {
 		}
 
 		// torque is for a rotating object
-		shipRigidBody.AddTorque(turnSpeed * - horizontalInputValue);
+//		shipRigidBody.AddTorque(turnSpeed * - horizontalInputValue);
 	}
 
 	public void ShootLaser() {

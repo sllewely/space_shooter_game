@@ -52,6 +52,7 @@ GameObject:
   - component: {fileID: 4263358925291402}
   - component: {fileID: 50497474065156780}
   - component: {fileID: 60177427434613958}
+  - component: {fileID: 114901384281475660}
   m_Layer: 0
   m_Name: AsteroidFragment_Prefab
   m_TagString: Untagged
@@ -85,6 +86,7 @@ GameObject:
   - component: {fileID: 4756114399536354}
   - component: {fileID: 50595060887205498}
   - component: {fileID: 60026494962171548}
+  - component: {fileID: 114532261022806590}
   m_Layer: 0
   m_Name: AsteroidFragment_Prefab (1)
   m_TagString: Untagged
@@ -118,6 +120,7 @@ GameObject:
   - component: {fileID: 4076011537031194}
   - component: {fileID: 50357851344731614}
   - component: {fileID: 60948869966539906}
+  - component: {fileID: 114886291638800224}
   m_Layer: 0
   m_Name: AsteroidFragment_Prefab (3)
   m_TagString: Untagged
@@ -151,6 +154,7 @@ GameObject:
   - component: {fileID: 4852400695155280}
   - component: {fileID: 50056055961631622}
   - component: {fileID: 60617466996670602}
+  - component: {fileID: 114649693312620554}
   m_Layer: 0
   m_Name: AsteroidFragment_Prefab (2)
   m_TagString: Untagged
@@ -490,11 +494,67 @@ PolygonCollider2D:
       - {x: 0.20546088, y: 1.1942484}
       - {x: -0.41163474, y: 1.1445682}
       - {x: -0.82408947, y: 0.68991864}
-      - {x: -0.903899, y: -0.34739903}
+      - {x: -0.7856848, y: -0.53771985}
       - {x: -0.53999007, y: -0.8994915}
       - {x: 0.011284202, y: -1.2425278}
       - {x: 0.545516, y: -1.0233035}
       - {x: 0.9376049, y: -0.48500377}
+--- !u!114 &114532261022806590
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1466294459524952}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ea39760a3a50495699189e33748d24c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fragmentHealth: 1
+  myRigid: {fileID: 50595060887205498}
+  pushForce: 4
+--- !u!114 &114649693312620554
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1878524329540736}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ea39760a3a50495699189e33748d24c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fragmentHealth: 1
+  myRigid: {fileID: 50056055961631622}
+  pushForce: 4
+--- !u!114 &114886291638800224
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1756429406360848}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ea39760a3a50495699189e33748d24c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fragmentHealth: 1
+  myRigid: {fileID: 50357851344731614}
+  pushForce: 4
+--- !u!114 &114901384281475660
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1309546269975392}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ea39760a3a50495699189e33748d24c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fragmentHealth: 1
+  myRigid: {fileID: 50497474065156780}
+  pushForce: 4
 --- !u!212 &212040887727100744
 SpriteRenderer:
   m_ObjectHideFlags: 1
