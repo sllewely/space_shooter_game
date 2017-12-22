@@ -32,7 +32,7 @@ public class Fragment_Controller : MonoBehaviour {
 	}
 
 	void OnCollisionEnter2D(Collision2D objectThatHitMe) {
-		Debug.Log ("hit by " + objectThatHitMe.gameObject.tag);
+//		Debug.Log ("hit by " + objectThatHitMe.gameObject.tag);
 		if (objectThatHitMe.gameObject.tag == "LaserShot_Basic") {
 			fragmentHealth--;
 		}
