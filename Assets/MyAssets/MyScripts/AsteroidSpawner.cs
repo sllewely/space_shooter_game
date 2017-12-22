@@ -36,8 +36,9 @@ public class AsteroidSpawner : MonoBehaviour {
 	}
 
 	void SpawnOneAsteroid() {
+		int numAsteroids = GameObject.FindGameObjectsWithTag ("Asteroid").Length;
 		asteroidCount++;
-		if (asteroidCount > maxAsteroids) {
+		if (numAsteroids > maxAsteroids) {
 			return;
 		}
 
