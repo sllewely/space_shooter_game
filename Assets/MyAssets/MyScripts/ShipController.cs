@@ -30,6 +30,15 @@ public class ShipController : MonoBehaviour {
 	// Update is called once per frame
 	// fine to do inputs inside of update
 	void Update () {
+
+		Vector3 mousePosition = Input.mousePosition;
+		// converts mouse position on the screen to the world
+		mousePosition = Camera.main.ScreenToWorldPoint (mousePosition);
+		mousePosition.z = 0;
+
+		Vector3 wantedDirection = mousePosition - transform.position;
+		transform.up = wantedDirection;
+
 //		if (Input.GetMouseButtonDown (0)) {
 		if (Input.GetKeyDown(KeyCode.Space)) {
 			ShootLaser ();
