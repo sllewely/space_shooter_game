@@ -22,6 +22,8 @@ public class AsteroidDeath : MonoBehaviour {
 			Debug.Log ("death by distance " + distanceFromCamera);
 			Destroy (gameObject);
 		}
+		// A better way
+//		Destroy(gameObject, lifeTimer);
 		if (lifeRemaining <= 0) {
 			Debug.Log ("death by time");
 			Destroy (gameObject);
